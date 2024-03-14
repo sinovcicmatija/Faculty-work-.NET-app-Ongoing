@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="PresentationLayer.AddRoomUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PresentationLayer"
+             mc:Ignorable="d" d:DesignWidth="800">
+    <UserControl.Resources>
+
+        <ResourceDictionary Source="../Resources/ToggleButtonDictionary.xaml"/>
+
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".1*"/>
+            <ColumnDefinition Width=".4*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnBack" Grid.Row="0" Grid.Column="0" Content="Natrag" Height="20" Background="Transparent"
+        BorderBrush="Transparent"
+        BorderThickness="0" Foreground="Black" Width="50" HorizontalAlignment="Left" Click="btnBack_Click"/>
+        <Label Margin="10,10,10,10" Content="Broj sobe:" Grid.Column="0" Grid.Row="1"/>
+        <Label Margin="10,10,10,10" Content="Lokacija:" Grid.Column="0" Grid.Row="2"/>
+        <Label Margin="10,10,10,10" Content="Cijena:" Grid.Column="0" Grid.Row="3"/>
+        <Label Margin="10,10,10,10" Content="Dostupnost:" Grid.Column="0" Grid.Row="4"/>
+        <Label Margin="10,10,10,10" Content="Tip sobe:" Grid.Column="0" Grid.Row="5"/>
+        <TextBox x:Name="txtRoomNumber" Margin="83,10,96,10" TextWrapping="Wrap" Grid.Column="2" Grid.Row="1"/>
+        <TextBox x:Name="txtRoomLocation" Margin="83,10,96,10" TextWrapping="Wrap" Grid.Column="2" Grid.Row="2"/>
+        <TextBox x:Name="txtRoomPrice" Margin="83,10,96,10" TextWrapping="Wrap" Grid.Column="2" Grid.Row="3"/>
+
+        <ComboBox x:Name="cbmRoomStatus" Margin="83,10,96,10" Grid.Row="4" Grid.Column="2"/>
+
+
+        <ComboBox x:Name="cbmRoomType" Margin="83,10,96,10" Grid.Column="2" Grid.Row="5" SelectionChanged="cbmRoomType_SelectionChanged"/>
+        <Label Margin="20,10,10,10" Content="Opis sobe:" Grid.Column="0" Grid.Row="6"/>
+        <Label Margin="20,10,10,10" Content="Broj kreveta:" Grid.Column="0" Grid.Row="7"/>
+        <TextBlock x:Name="txtRoomDescription" Margin="83,10,96,10" TextWrapping="Wrap" Width="120" Grid.Column="2" Grid.Row="6"/>
+        <TextBlock x:Name="txtNoOfBeds" Margin="83,10,96,10" TextWrapping="Wrap" Width="120" Grid.Column="2" Grid.Row="7"/>
+        <Label Margin="20,10,10,10" Content="Ni jedan tip sobe ne odgovara sobi?" Grid.Column="0" Grid.Row="8"/>
+        <Button x:Name="btnAddNewRoomType" Padding="2" Margin="10,10,10,10" Content="Dodaj novi tip sobe" Grid.Column="1" Grid.Row="8" Click="btnAddNewRoomType_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnAddRoom" Padding="5" Margin="10,10,10,10" Content="Dodaj novu sobu" Grid.Column="0" Grid.Row="9" Click="btnAddRoom_Click"/>
+        <Button x:Name="btnAlterSelectedRoom" Padding="5" Margin="10,10,10,10" Content="Spremi promjene" Grid.Column="0" Grid.Row="9" Visibility="Hidden" Click="btnAlterSelectedRoom_Click"/>
+
+
+
+
+    </Grid>
+</UserControl>

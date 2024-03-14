@@ -1,0 +1,39 @@
+﻿<Window x:Class="PresentationLayer.AppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresentationLayer"
+        mc:Ignorable="d"
+        Title="AppWindow" Height="700" Width="800" Loaded="Window_Loaded"
+        MinWidth="800"
+        MinHeight="700">
+    <Grid Background="#FFC9BA80">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".05*"/>
+            <RowDefinition Height=".95*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button Grid.Column="0" x:Name="btnStartPage" Content="Početna" Background="#FFEBE5CF" BorderBrush="#FFEBE5CF" Click="btnStartPage_Click"/>
+            <Button Grid.Column="1" x:Name="btnRoom" Content="Administracija soba"  Click="btnRoom_Click" Background="#FFEBE5CF" BorderBrush="#FFEBE5CF"/>
+            <Button Grid.Column="2" x:Name="btnReg" Content="Registracija" Click="btnReg_Click" Background="#FFEBE5CF" BorderBrush="#FFEBE5CF"/>
+            <Button Grid.Column="3" x:Name="btnLogout" Content="Odjava" Click="btnLogout_Click" Background="#FFEBE5CF" BorderBrush="#FFEBE5CF"/>
+                  
+        </Grid>
+        <Grid x:Name="gridContainer" Background="White" Grid.Row="1">
+
+            <ContentControl x:Name="mainContent" VerticalAlignment="Top"/>
+
+        </Grid>
+
+
+    </Grid>
+</Window>           
